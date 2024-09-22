@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.25s ease-in-out;
+}
+
+html, body {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 16px;
+}
+
+:root {
+    --white: #eee;
+    ---black: #111;
+    --red: #f11;
+    --orange: #f61;
+    --yellow: #dd1;
+    --green: #161;
+    --blue: #116;
+
+    --content-width: 1000px;
+
+    --display-stack: "Space Grotesk", "Atkinson Hyperlegible", sans-serif;
+    --text-stack: "Atkinson Hyperlegible", sans-serif;
+}
