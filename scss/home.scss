@@ -1,0 +1,84 @@
+#hero::before {
+    background-position-x: right;
+}
+
+#hero {
+    width: 100vw;
+    height: 80vh;
+
+    background-image: url("../assets/kirkwood27.webp");
+    background-size: cover;
+    background-position-x: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    filter: grayscale(100%);
+
+    h2 {
+        font-size: calc(5vw + 10vh);
+        font-family: var(--display-stack);
+        font-weight: bold;
+
+        -webkit-text-stroke: 1px var(--white);
+    }
+}
+
+h3.artHead {
+    width: 100vw;
+    max-width: var(--content-width);
+    padding: 10px;
+    margin-top: 5vh;
+
+    font-size: calc(3vh + 2vw);
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+@media (width >= 1000px) {
+    h3.artHead, .article {
+        margin-left: calc(0.5 * (100vw - var(--content-width)));
+        margin-right: calc(0.5 * (100vw - var(--content-width)));
+    }
+}
+
+.article {
+    width: 100%;
+    max-width: var(--content-width);
+    height: 40vh;
+    margin-bottom: 5vh;
+
+    display: flex;
+    justify-content: space-between;
+
+
+    img {
+        height: 40vh;
+        aspect-ratio: 1.5;
+    }
+
+    .artCont {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        font-size: calc(1.33vw + 1vh);
+
+        h4 {
+            font-size: calc(1.75vw + 1.5vh);
+        }
+
+        a.button {
+            background-color: var(--blue);
+            padding: 5px;
+            color: var(--white);
+        }
+
+        a.button:hover {
+            opacity: 0.8;
+        }
+    }
+}

@@ -1,6 +1,13 @@
-export function changePage(pageName) {
-    console.log(pageName);
-    let pageVarName = "../pages/" + pageName + ".html";
-    console.log(pageVarName);
-    $("#app").html(pageVarName);
+export function changePage(pageID){
+    if (pageID != '') {
+        $.get(`pages/${pageID}.html`, function (data) {
+        //console.log('data ' + data);
+        $('#app').html(data);
+        });
+    } else {
+        $.get(`pages/home.html`, function (data) {
+        //console.log('data ' + data);
+        $('#app').html(data);
+        });
+    }
 }

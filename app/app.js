@@ -10,4 +10,5 @@ function initlistener() {
 $(document).ready(function () {
     initlistener();
     model.changePage("home");
+    console.log("Started up.")
 })
