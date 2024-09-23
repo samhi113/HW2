@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 :root {
-  --white: #ddd;
+  --white: #E6E6E6;
   ---black: #222;
   --red: #f11;
   --orange: #f61;
@@ -58,29 +58,25 @@ nav a:hover {
   font-weight: bold;
 }
 
-#hero::before {
-  background-position-x: right;
-}
-
-#hero {
+.home #hero {
   width: 100vw;
   height: 80vh;
-  background-image: url("../assets/kirkwood27.webp");
+  background-image: url("../assets/kirkwood27.jpg");
   background-size: cover;
   background-position-x: left;
+  background-position-y: center;
   display: flex;
   justify-content: center;
   align-items: center;
   filter: grayscale(100%);
 }
-#hero h2 {
+.home #hero h2 {
   font-size: calc(5vw + 10vh);
   font-family: var(--display-stack);
   font-weight: bold;
   -webkit-text-stroke: 1px var(--white);
 }
-
-h3.artHead {
+.home h3.artHead {
   width: 100vw;
   max-width: var(--content-width);
   padding: 10px;
@@ -89,14 +85,13 @@ h3.artHead {
   color: var(--white);
   background-color: var(--blue);
 }
-
 @media (width >= 1000px) {
-  h3.artHead, .article {
+  .home h3.artHead, .home .article {
     margin-left: calc(0.5 * (100vw - var(--content-width)));
     margin-right: calc(0.5 * (100vw - var(--content-width)));
   }
 }
-.article {
+.home .article {
   width: 100%;
   max-width: var(--content-width);
   height: 40vh;
@@ -104,11 +99,11 @@ h3.artHead {
   display: flex;
   justify-content: space-between;
 }
-.article img {
+.home .article img {
   height: 40vh;
   aspect-ratio: 1.5;
 }
-.article .artCont {
+.home .article .artCont {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
@@ -116,16 +111,147 @@ h3.artHead {
   align-items: flex-end;
   font-size: calc(1.33vw + 1vh);
 }
-.article .artCont h4 {
+.home .article .artCont h4 {
   font-size: calc(1.75vw + 1.5vh);
 }
-.article .artCont a.button {
+.home .article .artCont a.button {
   background-color: var(--blue);
   padding: 5px;
   color: var(--white);
 }
-.article .artCont a.button:hover {
+.home .article .artCont a.button:hover {
   opacity: 0.8;
+}
+
+@media (width >= 1000px) {
+  .about {
+    margin-left: calc(0.5 * (100vw - var(--content-width)));
+  }
+  .aboutTitle {
+    margin-left: calc(-0.5 * (100vw - var(--content-width)));
+  }
+}
+.about {
+  width: 100%;
+  max-width: var(--content-width);
+  font-size: calc(0.75vw + 0.75vh);
+}
+.about .aboutTitle {
+  width: 100vw;
+  height: 20vh;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: calc(3vh + 3vw);
+  font-family: var(--display-stack);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about h3 {
+  font-size: calc(2vh + 2vw);
+}
+.about .success {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .success .sucSec {
+  min-width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(1vw + 1vh);
+}
+.about .success .sucSec h4 {
+  font-size: calc(3vh + 3vw);
+}
+
+@media (width >= 1000px) {
+  .cars {
+    margin-left: calc(0.5 * (100vw - var(--content-width)));
+  }
+  .carTitle {
+    margin-left: calc(-0.5 * (100vw - var(--content-width)));
+  }
+}
+.cars {
+  width: 100%;
+  max-width: var(--content-width);
+  font-size: calc(0.75vw + 0.75vh);
+}
+.cars .carTitle {
+  width: 100vw;
+  height: 20vh;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: calc(3vh + 3vw);
+  font-family: var(--display-stack);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cars .car {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10vh;
+}
+.cars .car h3 {
+  font-size: calc(3vh + 3vw);
+}
+.cars .car p {
+  width: 60%;
+}
+.cars .car img {
+  width: 12vw;
+  height: 8vw;
+}
+
+@media (width >= 1000px) {
+  .schedule {
+    margin-left: calc(0.5 * (100vw - var(--content-width)));
+  }
+  .schTitle {
+    margin-left: calc(-0.5 * (100vw - var(--content-width)));
+  }
+}
+.schedule {
+  width: 100%;
+  max-width: var(--content-width);
+  font-size: calc(15px + 0.4vw + 0.4vh);
+}
+.schedule .schTitle {
+  width: 100vw;
+  height: 20vh;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: calc(3vh + 3vw);
+  font-family: var(--display-stack);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.schedule .row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.schedule .row .race {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 15%;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: 30vh;
+}
+.schedule .row .race img {
+  width: 100%;
+  max-width: 10vw;
+  max-height: 8vw;
+  aspect-ratio: 1.2;
 }
 
 /*# sourceMappingURL=styles.css.map */

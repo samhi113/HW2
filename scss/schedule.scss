@@ -1,0 +1,55 @@
+@media (width >= 1000px) {
+    .schedule {
+        margin-left: calc(0.5 * (100vw - var(--content-width)));
+    }
+
+    .schTitle {
+        margin-left: calc(-0.5 * (100vw - var(--content-width)));
+    }
+}
+
+.schedule {
+    width: 100%;
+    max-width: var(--content-width);
+    font-size: calc(15px + 0.4vw + 0.4vh);
+
+    .schTitle {
+        width: 100vw;
+        height: 20vh;
+
+        background-color: var(--blue);
+        color: var(--white);
+        font-size: calc(3vh + 3vw);
+        font-family: var(--display-stack);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .race {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 15%;
+            margin-left: 1%;
+            margin-right: 1%;
+            height: 30vh;
+
+            img {
+                width: 100%;
+                max-width: 10vw;
+                max-height: 8vw;
+                aspect-ratio: 1.2;
+            }
+        }
+    }
+}
